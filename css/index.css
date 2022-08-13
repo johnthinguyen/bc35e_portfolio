@@ -1,0 +1,96 @@
+/* GLOBAL  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Hind', sans-serif;
+}
+
+/* header  */
+header {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+
+}
+
+#portNavbar .navbar-nav .nav-link:after {
+    content: '';
+    height: 2px;
+    background-color: green;
+    width: 0%;
+    display: block;
+    transition: all .5s;
+}
+
+#portNavbar .navbar-nav .nav-link:hover:after {
+    width: 100%;
+}
+
+#portNavbar .navbar-nav .nav-item a {
+    transition: all .5s;
+}
+
+#portNavbar .navbar-nav .nav-item a:hover {
+    color: green;
+}
+
+#portNavbar .active .nav-link::after {
+    width: 100% !important;
+    ;
+}
+
+#portNavbar .active .nav-link {
+    color: green;
+}
+
+#portNavbar .navbar-nav .nav-link {
+    color: white;
+}
+
+/* carousel 
+b1: chinh kich thuoc anh va avatar
+b2 :chinh background
+b3 chinh caption o giua carousel
+b4 : chinh hinh dang indicator */
+.portavatar {
+    width: 140px;
+    border-radius: 50%;
+}
+
+/* b2: chinh hinh nen 
+vw: usally use for font-size,content region important that client don't want change content "slogan,banner..."
+vh :  size follow size of browser*/
+#carouselCyberid .carousel-item {
+    /* always have % = browser  */
+    height: 100vh;
+}
+
+#carouselCyberid .carousel-item>img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    /* memorize that use object-fit 
+    filter :brightness : lam mo anh */
+}
+
+/* b3 : adjusted caption  */
+#carouselCyberid .carousel-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#carouselCyberid .carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#carouselCyberid .carousel-indicators li.active {
+    background-color: green;
+}
